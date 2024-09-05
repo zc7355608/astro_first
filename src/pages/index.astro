@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "Astro";
 ---
@@ -13,10 +15,13 @@ const pageTitle = "Astro";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">首页</a>
-		<a href="/blog/">博客</a>
-		<a href="/about/">关于</a>
-
+		<Header/>
 		<h1>我的 Astro 站点</h1>
+		<Footer/>
+
+		<script>
+			// 感觉路径会有坑
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
